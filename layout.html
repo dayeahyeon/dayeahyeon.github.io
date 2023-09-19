@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout</title>
+    
+    <style>
+        #div1{
+            
+            position:relative;
+            background-color:#DADADA;
+            width:500px;
+            height:700px;
+            
+        }
+
+        #div2{
+            
+            position:absolute;
+            background-color:#ffae6b;
+            left:55px;
+            top:100px;
+            opacity:0.7;
+            width:400px;
+            height:500px;
+        }
+
+        #div2 > p{
+            
+            font-family: Georgia, 'Times New Roman', Times, serif;    
+            font-weight:600;font-size:80px;
+            position:absolute;
+            z-index:100;
+            margin-left:55px;
+            margin-top:-50px;
+            color:#000dff;
+
+        }
+
+        /* 1번레이아웃 */
+
+        #div3{
+
+            left:20px;
+            background-color:#b2b2b2;
+            width:500px;
+            height:700px;
+           
+        }
+
+        #div3 :nth-of-type(1){
+            background-color: #818181;
+            width:200px;
+            height:300px;
+            opacity:0.75;
+        }
+
+        #div3 :nth-of-type(2){
+            background-color: #ffa149;
+            width:200px;
+            height:300px;
+            opacity:0.7;
+            margin-left:150px;
+            margin-top:-100px;
+        
+        }
+
+     
+        #div3 :nth-of-type(3){
+            background-color: #5b5b5b;
+            width:200px;
+            height:300px;
+            opacity:0.35;
+            margin-left:300px;
+            margin-top:-100px;
+        }
+
+        /* 2번레이아웃 */
+
+        #div4 {
+
+            position:relative;
+            background-color:#DADADA;
+            width:500px;
+            height:700px;
+
+        }
+
+        #a{
+            width:400px; height:600px;
+            background-color: #ffae6b;
+            position:absolute;
+            top:25px;
+            text-align:center;
+            color:white;
+            
+        }
+
+        #b{
+            width:300px; height:130px;
+            float:right;
+            background-color:#0400ff;
+            margin-top:45px;
+            opacity:0.5
+            z-index:5;
+        }
+
+        #c{
+            width:300px; height:130px;
+            float:right;
+            background-color:#0400ff;
+            margin-top:85px;
+            opacity:0.5
+            z-index:5;
+        }
+
+        #d{
+            width:300px; height:130px;
+            float:right;
+            background-color:#0400ff;
+            margin-top:80px;
+            opacity:0.5
+            z-index:5;
+        }
+
+        #aa{
+
+            float:right;
+            width:400px; height:600px;
+            margin-left:100px;
+            background-color: #979797;
+            position:absolute;
+            top:70px;
+            opacity:0.5
+           
+        }
+
+        /* 5번레이아웃 */
+        
+    </style>
+</head>
+
+
+<body>
+    <div id="div1">
+    </div>
+
+    <div id="div2">
+        <p>Layout</p>
+    </div>
+
+    <div id="div3">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+
+    <table width="500px" height=700px cellpadding="0" cellspacing="0" border="0">
+        <tr height="300px">
+            <td width="300px" align="left" valign="top" bgcolor="#7b7b7b">
+                <div style="position:absolute; z-index:1000; opacity:0.5; 
+                width:400px; height:200px; background-color:#0000ff; margin-top:20px;
+                font-size:24px; font-family:Arial, Helvetica, sans-serif; color:white;">
+                    AAA
+                </div>
+
+                <div style="position:absolute; z-index:1000; opacity:0.5; 
+                width:400px; height:200px; background-color:#0000ff; margin-top:250px;
+                font-size:24px; font-family:Arial, Helvetica, sans-serif; color:white;">
+                    BBB
+                </div>
+
+                <div style="position:absolute; z-index:1000; opacity:0.5; 
+                width:400px; height:200px; background-color:#0000ff; margin-top:480px;
+                font-size:24px; font-family:Arial, Helvetica, sans-serif; color:white;">
+                    CCC
+                </div>
+            </td>
+            <td width="100px" align="right" valign="bottom" bgcolor="#f6b475"> 
+            </td>
+        </tr> 
+           
+    </table>
+
+    <!-- 3번레이아웃 -->
+
+    <table width="500px" height="700px" cellpadding="0" cellspacing="0" border="0">
+        <tr height="100px">
+            <td colspan="2" width="300px" align="right" valign="top" bgcolor="#5b5b5b">
+                aaa
+            </td>
+        </tr>
+        <tr height="250px">
+            <td width="350px" align="left" valign="middle" bgcolor="#f6b475">
+                
+            </td>
+            <td align="right" valign="middle" bgcolor="#b2b2b2">
+                ccc
+            </td>
+        </tr>
+    </table>
+
+    <!-- 4번레이아웃 -->
+    
+
+    <div id="div4">
+        <div id="a">
+            <div id="b">aaa</div>
+            <div id="c">bbb</div>
+            <div id="d">ccc</div>
+        </div>
+
+        <div id="aa">
+
+        </div>
+    </div>
+
+    <!-- 5번레이아웃 -->
+
+
+    
+</body>
+</html>
